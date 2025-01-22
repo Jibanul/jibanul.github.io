@@ -2,90 +2,82 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Portfolio Website</title>
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- Custom CSS -->
+    <title>Responsive Portfolio Website Design</title>
     <link rel="stylesheet" href="style.css">
+    <!----Font awesome cdn  font icon css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header" id="header">
-        <div class="logo">
-            <h1>Jibanul Haque</h1>
+     <div class="hero-header">
+        <div class="wrapper">
+            <header>
+                <div class="logo">
+                    <i class="fa-solid fa-a"></i>
+                    <div class="logo-text">Jibanul Haque</div>
+                </div>
+                <nav>
+                    <div class="togglebtn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="navlinks">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Portfolio</a></li>
+                        <li><a href="#">Resume</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            <div class="container">
+                 <div class="hero-pic">
+                    <img src="images/main_photo.jpg" alt="profile pic">
+                 </div>
+                 <div class="hero-text">
+                    <h5>Hi I'm <span class="input">Frontend Developer</span></h5>
+                    <h1>Jibanul Haque</h1>
+                    <p> AI Researcher with a PhD specializing in Computer Vision, Machine Learning, 
+                        and Applied Statistics, with expertise in Generative AI.
+                    </p>
+
+                    <div class="btn-group">
+                       <a href="#" class="btn active">Download CV</a>
+                       <a href="#" class="btn">Contact</a>
+                    </div>
+
+                    <div class="social">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#"><i class="fa-brands fa-dribbble"></i></a>
+                        <a href="#"><i class="fa-brands fa-pintrest"></i></a>
+                    </div>
+                 </div>
+            </div>
         </div>
-    </header>
+     </div>
+     <!---typed js for typing text effect-->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+     <script>
+        /** creating button click show hide navbar **/
+        var togglebtn=document.querySelector(".togglebtn");
+        var nav=document.querySelector(".navlinks");
+        var links=document.querySelector(".navlinks li");
 
-    <!-- MAIN -->
-    <main class="main">
-        <!-- HOME -->
-        <section class="home section" id="home">
-            <h2 class="section__title">Welcome to My Portfolio</h2>
-        </section>
+        togglebtn.addEventListener("click", function(){
+            this.classList.toggle("click");
+            nav.classList.toggle("open");
+        })
 
-        <!-- ABOUT -->
-        <section class="about section" id="about">
-            <h2 class="section__title">About Me</h2>
-            <p>This is where I introduce myself.</p>
-        </section>
-
-        <!-- SKILLS -->
-        <section class="skills section" id="skills">
-            <h2 class="section__title">Skills</h2>
-            <p>This is where I showcase my skills.</p>
-        </section>
-
-        <!-- QUALIFICATION -->
-        <section class="qualification section">
-            <h2 class="section__title">Qualifications</h2>
-            <p>This is where I list my qualifications.</p>
-        </section>
-
-        <!-- SERVICES -->
-        <section class="services section" id="services">
-            <h2 class="section__title">Services</h2>
-            <p>This is where I list the services I offer.</p>
-        </section>
-
-        <!-- PORTFOLIO -->
-        <section class="portfolio section" id="portfolio">
-            <h2 class="section__title">Portfolio</h2>
-            <p>This is where I showcase my portfolio.</p>
-        </section>
-
-        <!-- PROJECT IN MIND -->
-        <section class="project section">
-            <h2 class="section__title">Project in Mind</h2>
-            <p>Details of a project I am planning.</p>
-        </section>
-
-        <!-- TESTIMONIAL -->
-        <section class="testimonial section">
-            <h2 class="section__title">Testimonials</h2>
-            <p>What others are saying about me.</p>
-        </section>
-
-        <!-- CONTACT ME -->
-        <section class="contact section" id="contact">
-            <h2 class="section__title">Contact Me</h2>
-            <p>Contact form goes here.</p>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>&copy; 2025 Jibanul Haque. All Rights Reserved.</p>
-    </footer>
-    
-    <!-- SCROLL TOP BUTTON -->
-    <a href="#header" class="scroll-top">↑</a>
-
-    <!-- SWIPER JS (Optional) -->
-    <script src=""></script>
-
-    <!-- MAIN JS (Optional) -->
-    <script src=""></script>
+        var typed=new Typed(".input",{
+            strings:["AI Researcher","Applied Scientist","Computer Vision Expert"],
+            typedSpeed:70,
+            backSpeed:55,
+            loop:true
+        })
+     </script>
 </body>
 </html>
